@@ -3,456 +3,251 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Comfort Point Consult – Architecture & Building Construction in Nigeria</title>
-  <meta name="description" content="Comfort Point Consult — Architectural & building consultancy, Lagos. Over 17 years of experience."/>
-  <meta name="keywords" content="architecture, building construction, construction company in Nigeria, architectural design, home construction, project management, Comfort Point Consult">
-  <meta name="robots" content="index, follow">
-
+  <title>Comfort Point Consult – Transforming Ideas into Architectural Reality</title>
+  <meta name="description" content="Comfort Point Consult is a trusted architecture and building construction company in Nigeria. We design and deliver residential, commercial and industrial projects with quality craftsmanship and innovative solutions."/>
+  <meta name="robots" content="index, follow" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Comfort Point Consult – Architecture & Building Construction in Nigeria">
-  <meta property="og:description" content="Professional architecture and construction services for residential and commercial projects across Nigeria.">
-  <meta property="og:url" content="https://comfortpointconsult.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/cover.jpg">
-
-  <!-- Local SEO -->
-  <meta name="geo.region" content="NG">
-  <meta name="geo.placename" content="Nigeria">
-  <meta name="geo.position" content="9.0820;8.6753">
-  <meta name="ICBM" content="9.0820, 8.6753">
-  <meta name="google-site-verification" content="JGAsCeKPKCQqVicmSbLYLDLhCZdHqbOr6fRvvl4xDNg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png" type="image/png">
-
-  <!-- Local Business Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Architect",
-    "name": "Comfort Point Consult",
-    "url": "https://comfortpointconsult.github.io/",
-    "logo": "https://comfortpointconsult.github.io/images/favicon.png",
-    "image": "https://comfortpointconsult.github.io/images/cover.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "NG",
-      "addressLocality": "Lagos"
-    },
-    "telephone": "+2348083801047",
-    "email": "comfortpointconsult@gmail.com",
-    "description": "Professional architecture and building construction services in Nigeria with over 17 years of experience."
-  }
-  </script>
-
+  <meta property="og:title" content="Comfort Point Consult – Transforming Ideas into Architectural Reality" />
+  <meta property="og:description" content="Architecture & building construction services across Nigeria. Professional design, planning and project delivery." />
+  <meta property="og:url" content="https://comfortpointconsult.github.io/" />
+  <meta property="og:type" content="website" />
+  <!-- NOTE: Replace images/logo paths below with your actual files in /images/ -->
+  <!-- Replace /images/logo.png with your actual logo file name -->
+  <link rel="icon" href="/images/favicon.png" />
   <style>
+    /* Basic reset & theme */
     :root {
-      --bg: #0b0b0c;         /* page background */
-      --card: #141414;       /* card background */
-      --text: #e7e7e7;       /* main text */
-      --muted: #bdbdbd;      /* secondary text */
-      --gold: #ffd700;       /* accent */
-      --gold-soft: rgba(255, 215, 0, 0.08);
-      --accent: #ffcc33;
-      --glass: rgba(255,255,255,0.02);
+      --accent: #00b4d8;
+      --dark: #0b1220;
+      --card: #0f1724;
+      --muted: #cbd5e1;
+      --glass: rgba(255,255,255,0.04);
     }
-
-    * { box-sizing: border-box; }
-    html,body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.6;
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{background:linear-gradient(180deg,#071425 0%,#071625 100%);color:var(--muted);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.45}
+    a{color:var(--accent);text-decoration:none}
+    header{
+      display:flex;align-items:center;gap:16px;padding:22px 18px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      position:sticky;top:0;backdrop-filter: blur(6px);z-index:50;border-bottom:1px solid rgba(255,255,255,0.03)
     }
-    a { color: inherit; text-decoration: none; }
-
-    /* Header */
-    header {
-      background: linear-gradient(180deg, #121212 0%, #171717 100%);
-      padding: 22px 18px;
-      text-align: center;
-      border-bottom: 3px solid rgba(255,215,0,0.12);
-      position: sticky;
-      top: 0;
-      z-index: 120;
-      backdrop-filter: blur(4px);
+    .brand {display:flex;align-items:center;gap:12px}
+    .brand img{height:58px;width:auto;border-radius:8px;background:var(--glass);padding:6px}
+    .brand h1{font-size:1.15rem;margin:0;color:white;letter-spacing:0.2px}
+    .tag{font-size:0.84rem;color:#b7d3e6;margin-top:2px}
+    main{max-width:1100px;margin:28px auto;padding:16px}
+    /* Hero */
+    .hero{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      gap:12px;text-align:center;
     }
-    .logo { width: 160px; height: auto; display: block; margin: 0 auto 8px; }
-    .brand-title { font-family: Georgia, 'Times New Roman', serif; font-size: 1.6rem; margin: 0; letter-spacing: 0.6px; color: var(--gold); }
-    .tagline { color: var(--accent); margin-top: 6px; font-weight: 600; }
-    .subline { color: var(--muted); margin-top: 6px; font-size: 0.92rem; }
-
-    /* Nav */
-    nav {
-      background: transparent;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px 8px;
-      border-bottom: 1px solid rgba(255,255,255,0.02);
-      z-index: 110;
-      flex-wrap: wrap;
-    }
-    nav a {
-      padding: 10px 14px;
-      font-weight: 600;
-      border-radius: 8px;
-      color: var(--muted);
-      transition: all 0.18s ease;
-    }
-    nav a:hover { color: var(--gold); background: var(--gold-soft); }
-
-    /* Slideshow / Hero */
-    .hero {
-      max-width: 1200px;
-      margin: 22px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 12px 34px rgba(0,0,0,0.6);
-      position: relative;
-      background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55));
-    }
-    .slideshow { position: relative; min-height: 360px; display:block; }
-    .slide { display: none; width:100%; height:420px; }
-    .slide img { width:100%; height:420px; object-fit:cover; display:block; filter: contrast(0.95) saturate(0.9); }
-    @media(max-width:720px){ .slide img{height:260px} .hero{margin:14px} }
-
-    /* Hero overlay content */
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-    }
-    .hero-card {
-      pointer-events: auto;
-      background: linear-gradient(180deg, rgba(20,20,20,0.6), rgba(20,20,20,0.55));
-      border-radius: 12px;
-      padding: 20px 28px;
-      text-align: center;
-      max-width: 880px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,215,0,0.04) inset;
-      border: 1px solid rgba(255,215,0,0.03);
-    }
-    .hero-card h1 { margin:0 0 8px; font-size:1.8rem; color:var(--gold); }
-    .hero-card p { margin:0; color:var(--muted); }
-
-    /* Section cards */
-    section {
-      padding: 28px 18px;
-      max-width: 1100px;
-      margin: 20px auto;
-      background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 6px 22px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,255,255,0.02);
-      transition: transform .35s ease, box-shadow .35s ease;
-    }
-    section.fade-in { transform: translateY(0); opacity: 1; }
-    h2 { text-align: center; color: var(--gold); margin-top: 6px; }
-
-    p { color: var(--muted); line-height: 1.6; }
-
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 14px;
-    }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
-      border-radius: 10px;
-      padding: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      transition: transform .25s ease, box-shadow .25s ease;
-      text-align: left;
-    }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
-    .card img { width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:10px; }
-
-    .testimonial { font-style: italic; color: var(--muted); padding: 14px; border-left: 4px solid var(--gold); border-radius: 6px; background: rgba(255,255,255,0.01); }
-
-    /* Contact / Form */
-    .contact-info { text-align:center; margin-bottom:12px; color:var(--muted); }
-    form.contact-form {
-      max-width:620px;
-      margin:14px auto;
-      padding:16px;
-      border-radius:10px;
-      background: rgba(255,255,255,0.02);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,255,255,0.02);
-    }
-    .contact-form input, .contact-form textarea {
-      width:100%;
-      padding:12px;
-      margin:8px 0;
-      border-radius:8px;
-      border:1px solid rgba(255,255,255,0.04);
-      background: rgba(255,255,255,0.02);
-      color: var(--text);
-      font-size: 1rem;
-    }
-    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.35); }
-    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(255,215,0,0.06); }
-
-    .contact-form button {
-      background: var(--gold);
-      color: #0b0b0c;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .contact-form button:hover { background: var(--accent); }
-
-    footer {
-      background: transparent;
-      color: var(--muted);
-      text-align: center;
-      padding: 24px 12px;
-      margin-top: 20px;
-    }
-    .socials { display:flex; gap:12px; justify-content:center; margin-top:8px; }
-    .socials a { color: var(--muted); font-weight:600; }
-
-    /* Floating Whatsapp & back-to-top */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 64px;
-      height: 64px;
-      z-index: 140;
-      border-radius: 50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background: linear-gradient(180deg, #25d366, #1fae4c);
-      border: 3px solid rgba(255,215,0,0.12);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    }
-    .whatsapp-float img { width:36px; height:36px; }
-
-    #backToTop {
-      display:none;
-      position:fixed;
-      bottom:100px;
-      right:26px;
-      z-index:130;
-      background:var(--gold);
-      color:#0b0b0c;
-      border:none;
-      padding:10px 12px;
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:700;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-    }
-    #backToTop:hover { transform: scale(1.05); }
-
-    /* Fade-in initial state */
-    section { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
-
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      .brand-title { font-size: 1.2rem; }
-      .hero-card h1 { font-size: 1.2rem; }
-      .hero-card { padding: 14px; }
-      .logo { width: 120px; }
+    .hero h2{color:#fff;margin:0;font-size:1.6rem}
+    .hero p{max-width:900px;color:#d0e6f6;margin:0.5rem 0 0}
+    .hero .cta {margin-top:14px;padding:10px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#0077b6);color:#021322;border:none;cursor:pointer;font-weight:600}
+    /* Slideshow */
+    .slideshow{margin-top:20px;position:relative;border-radius:12px;overflow:hidden;height:420px;background:#061526}
+    .slides{display:flex;height:100%;transition:transform 0.6s ease}
+    .slide{min-width:100%;height:100%;position:relative;display:flex;align-items:flex-end;justify-content:flex-start;padding:20px;background-size:cover;background-position:center}
+    .slide .info{background:linear-gradient(180deg, rgba(3,7,14,0) 0%, rgba(2,6,12,0.7) 60%);padding:18px;border-radius:8px;color:white;max-width:60%}
+    .slide h3{margin:0 0 6px;font-size:1.25rem}
+    .slide p{margin:0;color: #dfeffb}
+    .slideshow .controls{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;padding:0 8px;pointer-events:none}
+    .btn{background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.06);color:white;padding:10px;border-radius:8px;pointer-events:auto;cursor:pointer}
+    /* Grid gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}
+    .card{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 8px 20px rgba(2,6,23,0.6);cursor:pointer;transition:transform .2s}
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%;height:160px;object-fit:cover;display:block}
+    .card .meta{padding:12px}
+    .card .meta h4{margin:0;color:#fff;font-size:1rem}
+    .card .meta p{margin:6px 0 0;color:#bcd7ea;font-size:0.9rem}
+    /* modal */
+    .modal{position:fixed;inset:0;background:rgba(2,8,14,0.8);display:none;align-items:center;justify-content:center;z-index:120}
+    .modal img{max-width:92%;max-height:86%;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.8)}
+    .close-modal{position:absolute;top:18px;right:18px;background:rgba(0,0,0,0.6);border:0;padding:8px;border-radius:8px;color:white;cursor:pointer}
+    /* responsive tweaks */
+    @media (max-width:640px){
+      .slides{height:100%}
+      .slide .info{max-width:90%}
+      .hero h2{font-size:1.2rem}
+      .slideshow{height:260px}
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header id="home" role="banner">
-    <img src="images/logo.png" alt="Comfort Point Consult Logo" class="logo" />
-    <div class="brand-title">Comfort Point Consult</div>
-    <div class="tagline">Designing Spaces, Creating Comfort</div>
-    <div class="subline">Over 17 years of Architectural Excellence — Lagos, Nigeria</div>
+  <!-- Header with logo (replace /images/logo.png with your actual logo path) -->
+  <header>
+    <div class="brand">
+      <img src="/images/logo.png" alt="Comfort Point Consult logo" id="site-logo" onerror="this.style.display='none'"/>
+      <div>
+        <h1>Comfort Point Consult</h1>
+        <div class="tag">Transforming Ideas into Architectural Reality</div>
+      </div>
+    </div>
+    <div style="margin-left:auto;font-size:0.9rem;color:#89bcd6">Architecture • Building Construction • Nigeria</div>
   </header>
 
-  <!-- Nav -->
-  <nav role="navigation" aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Architectural design & construction — built for Nigeria</h2>
+      <p>We deliver modern residential, commercial and industrial projects — from concept and planning through construction and handover.</p>
+      <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
+    </section>
 
-  <!-- Hero / Slideshow -->
-  <div class="hero" aria-hidden="false">
-    <div class="slideshow" aria-label="Homepage slideshow">
-      <div class="slide"><img loading="lazy" src="images/slide1.jpg" alt="Slide 1 - residential project exterior"></div>
-      <div class="slide"><img loading="lazy" src="images/slide2.jpg" alt="Slide 2 - contemporary office building"></div>
-      <div class="slide"><img loading="lazy" src="images/slide3.jpg" alt="Slide 3 - modern apartment interior"></div>
-    </div>
+    <!-- Slideshow (Featured Projects) -->
+    <section aria-label="Featured projects" style="margin-top:18px;">
+      <h3 style="color:#dff3ff;margin:8px 4px">Featured Projects</h3>
+      <div class="slideshow" id="slideshow">
+        <div class="slides" id="slides">
+          <!-- Slide items: Replace background-image URLs with your own images in /images/ folder if you have them -->
+          <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?architecture,building')">
+            <div class="info">
+              <h3>Modern Duplex — Lagos</h3>
+              <p>Contemporary residential duplex with minimalist aesthetic and efficient spatial planning.</p>
+            </div>
+          </div>
 
-    <div class="hero-overlay" aria-hidden="false">
-      <div class="hero-card" role="region" aria-label="Intro">
-        <h1>Comfort Point Consult</h1>
-        <p>Professional architecture and building construction services in Nigeria — creative, durable & cost-effective.</p>
+          <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?construction,site')">
+            <div class="info">
+              <h3>Urban Office Refurbishment — Abuja</h3>
+              <p>Adaptive reuse and refurbishment of a commercial office block, improving efficiency and façade appeal.</p>
+            </div>
+          </div>
+
+          <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?modern,house')">
+            <div class="info">
+              <h3>Coastal Residential Project — Lagos State</h3>
+              <p>Durable materials and climate-aware design for coastal conditions.</p>
+            </div>
+          </div>
+
+          <div class="slide" style="background-image:url('https://source.unsplash.com/1600x900/?commercial,building')">
+            <div class="info">
+              <h3>Commercial Complex — Port Harcourt</h3>
+              <p>Mixed-use development combining retail and office spaces with modern façade treatment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btn" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+          <button class="btn" id="nextBtn" aria-label="Next slide">&#10095;</button>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Grid gallery -->
+    <section aria-label="Project gallery">
+      <h3 style="color:#dff3ff;margin:18px 4px 8px">Project Gallery</h3>
+      <div class="gallery" id="gallery">
+        <!-- Card 1 -->
+        <article class="card" data-full="https://source.unsplash.com/1400x900/?architecture,building">
+          <img src="https://source.unsplash.com/600x400/?architecture,building" alt="Modern building exterior" loading="lazy">
+          <div class="meta">
+            <h4>Modern Duplex</h4>
+            <p>Minimalist residential architecture in Lagos — efficient, modern layouts.</p>
+          </div>
+        </article>
+
+        <article class="card" data-full="https://source.unsplash.com/1400x900/?construction,site">
+          <img src="https://source.unsplash.com/600x400/?construction,site" alt="Construction site" loading="lazy">
+          <div class="meta">
+            <h4>Site Development</h4>
+            <p>Groundworks and site preparation for mid-sized housing development.</p>
+          </div>
+        </article>
+
+        <article class="card" data-full="https://source.unsplash.com/1400x900/?modern,house">
+          <img src="https://source.unsplash.com/600x400/?modern,house" alt="Modern house" loading="lazy">
+          <div class="meta">
+            <h4>Coastal Residence</h4>
+            <p>Climate-resilient design tailored for coastal environments.</p>
+          </div>
+        </article>
+
+        <article class="card" data-full="https://source.unsplash.com/1400x900/?commercial,building">
+          <img src="https://source.unsplash.com/600x400/?commercial,building" alt="Commercial building" loading="lazy">
+          <div class="meta">
+            <h4>Commercial Complex</h4>
+            <p>Retail and office mix with modern façade and circulation design.</p>
+          </div>
+        </article>
+
+        <article class="card" data-full="https://source.unsplash.com/1400x900/?interior,architecture">
+          <img src="https://source.unsplash.com/600x400/?interior,architecture" alt="Interior design" loading="lazy">
+          <div class="meta">
+            <h4>Interior Fit-Out</h4>
+            <p>Functional interiors focused on workflow and durability.</p>
+          </div>
+        </article>
+
+        <article class="card" data-full="https://source.unsplash.com/1400x900/?renovation,construction">
+          <img src="https://source.unsplash.com/600x400/?renovation,construction" alt="Renovation project" loading="lazy">
+          <div class="meta">
+            <h4>Renovation Works</h4>
+            <p>Upgrades and structural improvements across several client buildings.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:22px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:18px;border-radius:10px">
+      <h3 style="color:#dff3ff">Contact Us</h3>
+      <p style="color:#bfe1f6">Interested in working with Comfort Point Consult? Email: <a href="mailto:comfortpointconsult@gmail.com">comfortpointconsult@gmail.com</a> • Phone: +234 (your number)</p>
+      <p style="font-size:0.93rem;color:#9fcbe0">To display your address on Google Maps and local listings, consider adding a Google Business Profile for Comfort Point Consult.</p>
+    </section>
+
+    <footer style="margin-top:26px;padding:18px;text-align:center;color:#9fcbe0">© 2025 Comfort Point Consult</footer>
+  </main>
+
+  <!-- Image modal for gallery -->
+  <div class="modal" id="modal" role="dialog" aria-hidden="true">
+    <button class="close-modal" id="closeModal" aria-label="Close image">✕</button>
+    <img id="modalImg" alt="Expanded project image"/>
   </div>
 
-  <!-- About -->
-  <section id="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">About Comfort Point Consult</h2>
-    <p>
-      Comfort Point Consult is an architecture and building consultancy firm based in Lagos, led by <strong>Babatunde Fasan</strong>.
-      With over <strong>17 years</strong> in the field, we deliver refined, functional and sustainable architectural solutions for residential,
-      corporate and public projects. We design spaces that balance comfort with lasting style.
-    </p>
-  </section>
-
-  <!-- Services -->
-  <section id="services" aria-labelledby="services-heading">
-    <h2 id="services-heading">Our Services</h2>
-    <div class="grid">
-      <div class="card" role="article" aria-label="Architectural Design">
-        <img loading="lazy" src="images/service1.jpg" alt="Architectural design concept">
-        <h3>Architectural Design</h3>
-        <p>Concept design, detailed drawings, 3D visualization and planning for homes, offices and public buildings.</p>
-      </div>
-
-      <div class="card" role="article" aria-label="Construction Supervision">
-        <img loading="lazy" src="images/service2.jpg" alt="Construction supervision on site">
-        <h3>Construction Supervision</h3>
-        <p>On-site management, quality control and coordination with contractors to deliver projects on time and on budget.</p>
-      </div>
-
-      <div class="card" role="article" aria-label="Consultation and Project Management">
-        <img loading="lazy" src="images/service3.jpg" alt="Project management meeting">
-        <h3>Consultation & Project Management</h3>
-        <p>Comprehensive consultancy from feasibility to handover — cost estimates, compliance checks and project oversight.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" aria-labelledby="portfolio-heading">
-    <h2 id="portfolio-heading">Portfolio</h2>
-    <div class="grid">
-      <div class="card" aria-label="Luxury Villa">
-        <img loading="lazy" src="images/project1.jpg" alt="Luxury villa project">
-        <h3>Luxury Villa</h3>
-      </div>
-
-      <div class="card" aria-label="Corporate Office">
-        <img loading="lazy" src="images/project2.jpg" alt="Corporate office design">
-        <h3>Corporate Office</h3>
-      </div>
-
-      <div class="card" aria-label="Modern Apartment">
-        <img loading="lazy" src="images/project3.jpg" alt="Modern apartment design">
-        <h3>Modern Apartment</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" aria-labelledby="testimonials-heading">
-    <h2 id="testimonials-heading">What Our Clients Say</h2>
-    <div class="testimonial">"Comfort Point Consult delivered our dream home with style and professionalism. Highly recommended!" — Client, Lekki</div>
-    <div style="height:12px"></div>
-    <div class="testimonial">"Professional, reliable, and truly understands architecture that works." — Corporate Client, Victoria Island</div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact Us</h2>
-    <div class="contact-info">
-      <div class="small">📍 Lagos, Nigeria</div>
-      <div class="small">📱 WhatsApp: <a href="https://wa.me/2348083801047" target="_blank" rel="noopener noreferrer">080 8380 1047</a></div>
-      <div class="small">✉️ Email: <a href="mailto:comfortpointconsult@gmail.com">comfortpointconsult@gmail.com</a></div>
-    </div>
-
-    <h3 style="text-align:center">Message Us</h3>
-    <form class="contact-form" action="https://formsubmit.co/comfortpointconsult@gmail.com" method="POST" aria-label="Contact form">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://ecclesiastes-sys.github.io/comfortpoint/thankyou.html">
-      <input type="hidden" name="_subject" value="New Message from Comfort Point Website">
-      <label for="name">Full name</label>
-      <input id="name" type="text" name="name" required placeholder="Your full name">
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" required placeholder="you@example.com">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project"></textarea>
-      <div style="text-align:center;margin-top:8px"><button type="submit">Send Message</button></div>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <div class="small">&copy; 2025 Comfort Point Consult — Designed & managed by Babatunde Fasan</div>
-    <div class="socials">
-      <a href="https://twitter.com/comfortpointconsult" target="_blank" rel="noopener noreferrer">Twitter</a>
-      <a href="https://facebook.com/comfortpointconsult" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="https://linkedin.com/in/comfortpointconsult" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
-  </footer>
-
-  <!-- WhatsApp float -->
-  <a class="whatsapp-float" href="https://wa.me/2348083801047" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp icon">
-  </a>
-
-  <button id="backToTop" aria-label="Back to top">⬆</button>
-
   <script>
-    // Simple slideshow
+    // Simple slideshow logic
     (function(){
-      let slideIndex = 0;
-      const slides = document.getElementsByClassName('slide');
-      function showSlides(){
-        for(let i=0;i<slides.length;i++) slides[i].style.display = 'none';
-        slideIndex++;
-        if(slideIndex>slides.length) slideIndex=1;
-        if(slides[slideIndex-1]) slides[slideIndex-1].style.display = 'block';
-        setTimeout(showSlides, 4200);
+      const slides = document.getElementById('slides');
+      const total = slides.children.length;
+      let idx = 0;
+      const slideWidth = 100; // percent
+
+      function show(i){
+        idx = (i + total) % total;
+        slides.style.transform = 'translateX(' + (-idx * slideWidth) + '%)';
       }
-      showSlides();
+      document.getElementById('prevBtn').addEventListener('click', ()=> show(idx-1));
+      document.getElementById('nextBtn').addEventListener('click', ()=> show(idx+1));
+
+      // Auto-play
+      let autoplay = setInterval(()=> show(idx+1), 6000);
+      // Pause on hover
+      document.getElementById('slideshow').addEventListener('mouseenter', ()=> clearInterval(autoplay));
+      document.getElementById('slideshow').addEventListener('mouseleave', ()=> autoplay = setInterval(()=> show(idx+1), 6000));
+      // initial
+      show(0);
     })();
 
-    // Smooth scroll for nav
-    document.querySelectorAll('nav a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if(el) window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
+    // Gallery modal logic
+    (function(){
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImg');
+      const close = document.getElementById('closeModal');
+      document.getElementById('gallery').addEventListener('click', function(e){
+        let card = e.target.closest('.card');
+        if(!card) return;
+        const full = card.getAttribute('data-full');
+        modalImg.src = full || card.querySelector('img').src;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden','false');
       });
-    });
-
-    // Fade-in sections
-    const sections = document.querySelectorAll('section');
-    const obs = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('fade-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
-    sections.forEach(s => obs.observe(s));
-
-    // Back to top visibility
-    const btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if(document.documentElement.scrollTop > 300) btt.style.display = 'block';
-      else btt.style.display = 'none';
-    });
-    btt.addEventListener('click', ()=> window.scrollTo({ top: 0, behavior: 'smooth' }));
+      close.addEventListener('click', ()=> { modal.style.display='none'; modal.setAttribute('aria-hidden','true'); modalImg.src='';});
+      modal.addEventListener('click', function(e){ if(e.target === modal) { modal.style.display='none'; modal.setAttribute('aria-hidden','true'); modalImg.src=''; }});
+    })();
   </script>
 </body>
 </html>
